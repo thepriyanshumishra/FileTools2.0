@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GITHUB_URL_FILETOOLS, DISCORD_URL } from "$lib/util/consts";
+	import { GITHUB_URL_FILETOOLS } from "$lib/util/consts";
 	import { m } from "$lib/paraglide/messages";
 
 	const commitHash =
@@ -9,7 +9,6 @@
 
 	const items = $derived([
 		[m["footer.source_code"](), GITHUB_URL_FILETOOLS],
-		[m["footer.discord_server"](), DISCORD_URL],
 		[m["footer.privacy_policy"](), "/privacy"],
 		...(commitHash
 			? [[commitHash, `${GITHUB_URL_FILETOOLS}/commit/${commitHash}`]]
