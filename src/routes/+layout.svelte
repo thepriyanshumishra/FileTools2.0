@@ -135,6 +135,11 @@
 		name="description"
 		content="With FileTools, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
 	/>
+	<meta
+		name="keywords"
+		content="file converter, image converter, audio converter, document converter, privacy focused, open source, local conversion, webassembly, ffmpeg, imagemagick, pandoc"
+	/>
+	<meta name="author" content="FileTools Team" />
 	<meta property="og:url" content="https://filetools.app" />
 	<meta property="og:type" content="website" />
 	<meta

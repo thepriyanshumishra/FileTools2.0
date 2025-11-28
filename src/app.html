@@ -1,54 +1,118 @@
 <!doctype html>
 <html lang="%lang%">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
-		<link rel="alternate icon" href="%sveltekit.assets%/favicon.png" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/favicon.png" />
 
-		<link
-			rel="apple-touch-startup-image"
-			href="%sveltekit.assets%/lettermark.jpg"
-		/>
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta
-			name="apple-mobile-web-app-status-bar-style"
-			content="black-translucent"
-		/>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+	).matches;
+	console.log(
+	`Theme: ${theme || "N/A"}, prefers dark: ${prefersDark}`,
+	);
 
-		%sveltekit.head%
-		<script>
-			(function () {
-				// Apply theme before DOM is loaded
-				let theme = localStorage.getItem("theme");
-				const prefersDark = window.matchMedia(
-					"(prefers-color-scheme: dark)",
-				).matches;
-				console.log(
-					`Theme: ${theme || "N/A"}, prefers dark: ${prefersDark}`,
-				);
+	if (theme !== "light" && theme !== "dark") {
+	console.log("Invalid theme, setting to default");
+	theme = prefersDark ? "dark" : "light";
+	localStorage.setItem("theme", theme);
+	}
 
-				if (theme !== "light" && theme !== "dark") {
-					console.log("Invalid theme, setting to default");
-					theme = prefersDark ? "dark" : "light";
-					localStorage.setItem("theme", theme);
+	console.log(`Applying theme: ${theme}`);
+	document.documentElement.classList.add(theme);
+
+	// Lock dark reader if it's set to dark mode
+	if (theme === "dark") {
+	< !doctype html>
+		<html lang="%lang%">
+
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+			<link rel="alternate icon" href="%sveltekit.assets%/favicon.png" />
+			<link rel="apple-touch-icon" href="%sveltekit.assets%/favicon.png" />
+
+			<link rel="apple-touch-startup-image" href="%sveltekit.assets%/lettermark.jpg" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="description"
+				content="Free, open-source, and private file converter. Convert images, audio, and documents locally on your device. No file size limits, no ads." />
+			<meta name="keywords"
+				content="file converter, image converter, audio converter, document converter, privacy focused, open source, local conversion, webassembly, ffmpeg, imagemagick, pandoc" />
+			<meta name="author" content="FileTools Team" />
+			<meta name="theme-color" content="#ec4899" />
+
+			<!-- Open Graph / Facebook -->
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="https://filetools.app/" />
+			<meta property="og:title" content="FileTools - Private & Free File Converter" />
+			<meta property="og:description"
+				content="Convert files locally on your device with FileTools. No ads, no tracking, no file size limits. Supports images, audio, and documents." />
+			<meta property="og:image" content="https://filetools.app/banner.png" />
+
+			<!-- Twitter -->
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="https://filetools.app/" />
+			<meta property="twitter:title" content="FileTools - Private & Free File Converter" />
+			<meta property="twitter:description"
+				content="Convert files locally on your device with FileTools. No ads, no tracking, no file size limits." />
+			<meta property="twitter:image" content="https://filetools.app/banner.png" />
+
+			<link rel="canonical" href="https://filetools.app/" />
+			<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+			%sveltekit.head%
+			<script>
+				(function () {
+					// Apply theme before DOM is loaded
+					let theme = localStorage.getItem("theme");
+					const prefersDark = window.matchMedia(
+						"(prefers-color-scheme: dark)",
+					).matches;
+					console.log(
+						`Theme: ${theme || "N/A"}, prefers dark: ${prefersDark}`,
+					);
+
+					if (theme !== "light" && theme !== "dark") {
+						console.log("Invalid theme, setting to default");
+						theme = prefersDark ? "dark" : "light";
+						localStorage.setItem("theme", theme);
+					}
+
+					console.log(`Applying theme: ${theme}`);
+					document.documentElement.classList.add(theme);
+
+					// Lock dark reader if it's set to dark mode
+					if (theme === "dark") {
+						const lock = document.createElement("meta");
+						lock.name = "darkreader-lock";
+						document.head.appendChild(lock);
+					}
+				})();
+			</script>
+			<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "FileTools",
+				"applicationCategory": "UtilitiesApplication",
+				"operatingSystem": "Web",
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				},
+				"description": "Free, open-source, and private file converter. Convert images, audio, and documents locally on your device.",
+				"author": {
+					"@type": "Organization",
+					"name": "FileTools Team",
+					"url": "https://filetools.app"
 				}
-
-				console.log(`Applying theme: ${theme}`);
-				document.documentElement.classList.add(theme);
-
-				// Lock dark reader if it's set to dark mode
-				if (theme === "dark") {
-					const lock = document.createElement("meta");
-					lock.name = "darkreader-lock";
-					document.head.appendChild(lock);
-				}
-			})();
+			}
 		</script>
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+		</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
