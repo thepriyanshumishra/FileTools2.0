@@ -1,17 +1,8 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/bf441748-0ec5-4c8a-b3e5-11301ee3f0bd" alt="FileTools's logo" height="100">
-</p>
-<h1 align="center"><a href="https://filetools.app">FileTools.app</a></h1>
+# FileTools.app
 
 FileTools is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. Check out the live instance at [filetools.app](https://filetools.app).
 
 FileTools is built in Svelte and TypeScript.
-
-## Screenshots
-
-|                     Upload page                      |                     Conversion page                      |
-| :--------------------------------------------------: | :------------------------------------------------------: |
-| ![FileTools upload page](docs/images/screenshot-home.png) | ![FileTools convert page](docs/images/screenshot-convert.png) |
 
 ## Features
 
