@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #ec4899; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+    }
+  </style>
+  <rect class="bg" width="512" height="512" rx="128" />
+  <text x="50%" y="55%" font-family="Arial, sans-serif" font-weight="bold" font-size="280" fill="white" text-anchor="middle" dominant-baseline="middle">FT</text>
+</svg>
