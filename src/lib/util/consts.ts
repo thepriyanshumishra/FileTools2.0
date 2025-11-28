@@ -1,8 +1,8 @@
 import { PUB_DISABLE_ALL_EXTERNAL_REQUESTS, PUB_ENV } from "$env/static/public";
 
-export const GITHUB_URL_FILETOOLS = "https://github.com/filetools/FileTools";
-export const GITHUB_URL_FILETOOLSD = "https://github.com/filetools/filetoolsd";
-export const GITHUB_API_URL = "https://api.github.com/repos/filetools/FileTools";
+export const GITHUB_URL_FILETOOLS = "https://github.com/thepriyanshumishra/FileTools2.0";
+export const GITHUB_URL_FILETOOLSD = "https://github.com/thepriyanshumishra/FileTools2.0"; // Assuming same repo for now
+export const GITHUB_API_URL = "https://api.github.com/repos/thepriyanshumishra/FileTools2.0";
 export const DISCORD_URL = "https://discord.gg/kqevGxYPak";
 export const FILETOOLS_NAME =
 	PUB_ENV === "development"
