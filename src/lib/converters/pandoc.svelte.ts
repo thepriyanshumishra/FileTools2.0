@@ -52,14 +52,15 @@ export class PandocConverter extends Converter {
 		};
 		worker.postMessage(loadMsg);
 		await waitForMessage(worker, "loaded");
+
 		const convertMsg: WorkerMessage = {
 			type: "convert",
-			to,
+			to: to,
 			input: {
 				file: file.file,
 				name: file.name,
 				from: file.from,
-				to,
+				to: to,
 			},
 			compression: null,
 			id: file.id,
@@ -104,6 +105,7 @@ export class PandocConverter extends Converter {
 		if (!to.startsWith(".")) to = `.${to}`;
 		this.activeConversions.delete(file.id);
 		worker.terminate();
+
 		return new VertFile(
 			new File([result.output], file.name),
 			result.isZip ? ".zip" : to,
@@ -131,7 +133,6 @@ export class PandocConverter extends Converter {
 
 	public supportedFormats = [
 		new FormatInfo("docx", true, true),
-		new FormatInfo("doc", true, true),
 		new FormatInfo("md", true, true),
 		new FormatInfo("html", true, true),
 		new FormatInfo("rtf", true, true),

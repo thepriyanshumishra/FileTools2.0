@@ -1,0 +1,1 @@
+export const env={"PUB_ENV":"development","PUB_DISABLE_ALL_EXTERNAL_REQUESTS":"false","PUB_FILETOOLSD_URL":"https://eu.filetoolsd.filetools.app","PUB_HOSTNAME":"filetools.app","PUB_PLAUSIBLE_URL":"https://plausible.filetools.app","PUB_DONATION_URL":"https://donate.filetools.app","PUB_STRIPE_KEY":"pk_test_placeholder"}

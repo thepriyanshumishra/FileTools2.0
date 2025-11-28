@@ -2,7 +2,7 @@ import FileToolsDErrorComponent from "$lib/components/functional/FileToolsDError
 import { error, log } from "$lib/util/logger";
 import { m } from "$lib/paraglide/messages";
 import { Settings } from "$lib/sections/settings/index.svelte";
-import { FileToolsDInstance } from "$lib/sections/settings/vertdSettings.svelte";
+import { FileToolsDInstance } from "$lib/sections/settings/filetoolsdSettings.svelte";
 import { VertFile } from "$lib/types";
 import { Converter, FormatInfo } from "./converter.svelte";
 
@@ -326,7 +326,7 @@ export class FileToolsDConverter extends Converter {
 		if (this.blocked(hash)) {
 			this.log(`conversion blocked for file ${input.name}`);
 			throw new Error(
-				m["convert.errors.vertd_ratelimit"]({
+				m["convert.errors.filetoolsd_ratelimit"]({
 					filename: input.name,
 				}),
 			);

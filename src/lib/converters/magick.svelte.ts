@@ -4,7 +4,6 @@ import { m } from "$lib/paraglide/messages";
 import { VertFile, type WorkerMessage } from "$lib/types";
 import MagickWorker from "$lib/workers/magick?worker&url";
 import { Converter, FormatInfo } from "./converter.svelte";
-import { imageFormats } from "./magick-automated";
 import { Settings } from "$lib/sections/settings/index.svelte";
 import magickWasm from "@imagemagick/magick-wasm/magick.wasm?url";
 import { ToastManager } from "$lib/util/toast.svelte";
@@ -26,20 +25,15 @@ export class MagickConverter extends Converter {
 		new FormatInfo("svg", true, true),
 		new FormatInfo("jxl", true, true),
 		new FormatInfo("avif", true, true),
-		new FormatInfo("heic", true, false), // seems to be unreliable? HEIC/HEIF is very weird if it will actually work
-		new FormatInfo("heif", true, false),
+		// new FormatInfo("heic", true, false), // seems to be unreliable? HEIC/HEIF is very weird if it will actually work
+		// new FormatInfo("heif", true, false),
 		// TODO: .ico files can encode multiple images at various
 		// sizes, bitdepths, etc. we should support that in future
 		new FormatInfo("ico", true, true),
 		new FormatInfo("bmp", true, true),
 		new FormatInfo("cur", true, true),
-		new FormatInfo("ani", true, false),
-		new FormatInfo("icns", true, false),
-		new FormatInfo("nef", true, false),
-		new FormatInfo("cr2", true, false),
 		new FormatInfo("hdr", true, true),
 		new FormatInfo("jpe", true, true),
-		new FormatInfo("mat", true, true),
 		new FormatInfo("pbm", true, true),
 		new FormatInfo("pfm", true, true),
 		new FormatInfo("pgm", true, true),
@@ -49,32 +43,23 @@ export class MagickConverter extends Converter {
 		new FormatInfo("jfif", true, true),
 		new FormatInfo("eps", false, true),
 		new FormatInfo("psd", true, true),
-
-		// raw camera formats
-		new FormatInfo("arw", true, false),
 		new FormatInfo("tif", true, true),
-		new FormatInfo("dng", true, false),
-		new FormatInfo("xcf", true, false),
-		new FormatInfo("rw2", true, false),
-		new FormatInfo("raf", true, false),
-		new FormatInfo("orf", true, false),
-		new FormatInfo("pef", true, false),
-		new FormatInfo("mos", true, false),
-		new FormatInfo("raw", true, false),
-		new FormatInfo("dcr", true, false),
-		new FormatInfo("crw", true, false),
-		new FormatInfo("cr3", true, false),
-		new FormatInfo("3fr", true, false),
-		new FormatInfo("erf", true, false),
-		new FormatInfo("mrw", true, false),
-		new FormatInfo("mef", true, false),
-		new FormatInfo("nrw", true, false),
-		new FormatInfo("srw", true, false),
-		new FormatInfo("sr2", true, false),
-		new FormatInfo("srf", true, false),
 
-		// formats added from maya's somewhat automated testing
-		...imageFormats,
+		// additional useful formats
+		new FormatInfo("dds", true, true),
+		new FormatInfo("exr", true, true),
+		new FormatInfo("jp2", true, true),
+		new FormatInfo("j2k", true, true),
+		new FormatInfo("jpc", true, true),
+		new FormatInfo("miff", true, true),
+		new FormatInfo("pcx", true, true),
+		new FormatInfo("pict", true, true),
+		new FormatInfo("qoi", true, true),
+		new FormatInfo("sgi", true, true),
+		new FormatInfo("tga", true, true),
+		new FormatInfo("wbmp", true, true),
+		new FormatInfo("xbm", true, true),
+		new FormatInfo("xpm", true, true),
 	];
 
 	public readonly reportsProgress = false;

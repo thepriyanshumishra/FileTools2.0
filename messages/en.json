@@ -8,7 +8,7 @@
 		"toggle_theme": "Toggle theme"
 	},
 	"footer": {
-		"copyright": "© {year} VERT.",
+		"copyright": "© {year} FileTools.",
 		"source_code": "Source code",
 		"discord_server": "Discord server",
 		"privacy_policy": "Privacy policy"
@@ -21,7 +21,7 @@
 			"convert": "convert"
 		},
 		"cards": {
-			"title": "VERT supports...",
+			"title": "FileTools supports...",
 			"images": "Images",
 			"audio": "Audio",
 			"documents": "Documents",
@@ -92,25 +92,25 @@
 		},
 		"errors": {
 			"cant_convert": "We can't convert this file.",
-			"vertd_server": "what are you doing..? you're supposed to run the vertd server!",
-			"vertd_generic_view": "View error details",
-			"vertd_generic_body": "An error occurred whilst whilst trying convert your video. Would you like to submit this video to the developers to help fix this bug? Only your video file will be sent. No identifiers will be uploaded.",
-			"vertd_generic_title": "Video conversion error",
-			"vertd_generic_yes": "Submit video",
-			"vertd_generic_no": "Don't submit",
-			"vertd_failed_to_keep": "Failed to keep the video on the server: {error}",
-			"vertd_details": "View error details",
-			"vertd_details_body": "If you press submit, <b>your video will also be attached</b> alongside the error log which is always reported to us for review. The following information is the log that we automatically receive:",
-			"vertd_details_footer": "This information will only be used for troubleshooting purposes and will never be shared. View our [privacy_link]privacy policy[/privacy_link] for more details.",
-			"vertd_details_job_id": "<b>Job ID:</b> {jobId}",
-			"vertd_details_from": "<b>From format:</b> {from}",
-			"vertd_details_to": "<b>To format:</b> {to}",
-			"vertd_details_error_message": "<b>Error message:</b> [view_link]View error logs[/view_link]",
-			"vertd_details_close": "Close",
-			"vertd_ratelimit": "Your video, '{filename}', has failed to convert a few times. To prevent server overload, further conversion attempts for this file have been temporarily blocked. Please try again later.",
+			"filetoolsd_server": "what are you doing..? you're supposed to run the filetoolsd server!",
+			"filetoolsd_generic_view": "View error details",
+			"filetoolsd_generic_body": "An error occurred whilst whilst trying convert your video. Would you like to submit this video to the developers to help fix this bug? Only your video file will be sent. No identifiers will be uploaded.",
+			"filetoolsd_generic_title": "Video conversion error",
+			"filetoolsd_generic_yes": "Submit video",
+			"filetoolsd_generic_no": "Don't submit",
+			"filetoolsd_failed_to_keep": "Failed to keep the video on the server: {error}",
+			"filetoolsd_details": "View error details",
+			"filetoolsd_details_body": "If you press submit, <b>your video will also be attached</b> alongside the error log which is always reported to us for review. The following information is the log that we automatically receive:",
+			"filetoolsd_details_footer": "This information will only be used for troubleshooting purposes and will never be shared. View our [privacy_link]privacy policy[/privacy_link] for more details.",
+			"filetoolsd_details_job_id": "<b>Job ID:</b> {jobId}",
+			"filetoolsd_details_from": "<b>From format:</b> {from}",
+			"filetoolsd_details_to": "<b>To format:</b> {to}",
+			"filetoolsd_details_error_message": "<b>Error message:</b> [view_link]View error logs[/view_link]",
+			"filetoolsd_details_close": "Close",
+			"filetoolsd_ratelimit": "Your video, '{filename}', has failed to convert a few times. To prevent server overload, further conversion attempts for this file have been temporarily blocked. Please try again later.",
 			"unsupported_format": "Only image, video, audio, and document files are supported",
 			"format_output_only": "This format can currently only be used as output (converted to), not as input.",
-			"vertd_not_found": "Could not find the vertd instance to start video conversion. Are you sure the instance URL is set correctly?",
+			"filetoolsd_not_found": "Could not find the filetoolsd instance to start video conversion. Are you sure the instance URL is set correctly?",
 			"worker_downloading": "The {type} converter is currently being initialized, please wait a few moments.",
 			"worker_error": "The {type} converter had an error during initialization, please try again later.",
 			"worker_timeout": "The {type} converter is taking longer than expected to initialize, please wait a few more moments or refresh the page.",
@@ -140,7 +140,7 @@
 			"advanced_settings": "Advanced settings",
 			"filename_format": "File name format",
 			"filename_description": "This will determine the name of the file on download, <b>not including the file extension.</b> You can put these following templates in the format, which will be replaced with the relevant information: <b>%name%</b> for the original file name, <b>%extension%</b> for the original file extension, and <b>%date%</b> for a date string of when the file was converted.",
-			"placeholder": "VERT_%name%",
+			"placeholder": "FileTools_%name%",
 			"default_format": "Default conversion format",
 			"default_format_enable": "Enable",
 			"default_format_disable": "Disable",
@@ -160,14 +160,14 @@
 			"quality_images": "Image (%)",
 			"rate": "Sample rate (Hz)"
 		},
-		"vertd": {
+		"filetoolsd": {
 			"title": "Video conversion",
 			"status": "status:",
 			"loading": "loading...",
 			"available": "available, commit id {commitId}",
 			"unavailable": "unavailable (is the url right?)",
-			"description": "The <code>vertd</code> project is a server wrapper for FFmpeg. This allows you to convert videos through the convenience of VERT's web interface, while still being able to harness the power of your GPU to do it as quickly as possible.",
-			"hosting_info": "We host a public instance for your convenience, but it is quite easy to host your own on your PC or server if you know what you are doing. You can download the server binaries [vertd_link]here[/vertd_link] - the process of setting this up will become easier in the future, so stay tuned!",
+			"description": "The <code>filetoolsd</code> project is a server wrapper for FFmpeg. This allows you to convert videos through the convenience of FileTools's web interface, while still being able to harness the power of your GPU to do it as quickly as possible.",
+			"hosting_info": "We host a public instance for your convenience, but it is quite easy to host your own on your PC or server if you know what you are doing. You can download the server binaries [filetoolsd_link]here[/filetoolsd_link] - the process of setting this up will become easier in the future, so stay tuned!",
 			"instance": "Instance",
 			"url_placeholder": "Example: http://localhost:24153",
 			"conversion_speed": "Conversion speed",
@@ -202,7 +202,7 @@
 			"cache_cleared": "Cache cleared successfully!",
 			"cache_clear_error": "Failed to clear cache.",
 			"site_data_title": "Site data management",
-			"site_data_description": "Clear all site data including settings and cached files, resetting VERT to its default state and reloading the page.",
+			"site_data_description": "Clear all site data including settings and cached files, resetting FileTools to its default state and reloading the page.",
 			"clear_all_data": "Clear all site data",
 			"clear_all_data_confirm_title": "Clear all site data?",
 			"clear_all_data_confirm": "This will reset all settings & cache, then reload the page. This action cannot be undone.",
@@ -212,13 +212,13 @@
 		},
 		"language": {
 			"title": "Language",
-			"description": "Select your preferred language for the VERT interface."
+			"description": "Select your preferred language for the FileTools interface."
 		}
 	},
 	"about": {
 		"title": "About",
 		"why": {
-			"title": "Why VERT?",
+			"title": "Why FileTools?",
 			"description": "<b>File converters have always disappointed us.</b> They're ugly, riddled with ads, and most importantly; slow. We decided to solve this problem once and for all by making an alternative that solves all those problems, and more.<br/><br/>All non-video files are converted completely on-device; this means that there's no delay between sending and receiving the files from a server, and we never get to snoop on the files you convert.<br/><br/>Video files get uploaded to our lightning-fast RTX 4000 Ada server. Your videos stay on there for an hour if you do not convert them. If you do convert the file, the video will stay on the server for an hour, or until it is downloaded. The file will then be deleted from our server."
 		},
 		"sponsors": {
@@ -233,8 +233,8 @@
 			"email": "Email"
 		},
 		"donate": {
-			"title": "Donate to VERT",
-			"description": "With your support, we can keep maintaining and improving VERT.",
+			"title": "Donate to FileTools",
+			"description": "With your support, we can keep maintaining and improving FileTools.",
 			"one_time": "One-time",
 			"monthly": "Monthly",
 			"custom": "Custom",
@@ -244,19 +244,19 @@
 			"payment_failed": "Payment failed: {message}{period} You have not been charged.",
 			"donation_error": "An error occurred while processing your donation. Please try again later.",
 			"payment_error": "Error fetching payment details. Please try again later.",
-			"donation_notice_official": "Your donations here go to the official FileTools instance (vert.sh), and helps to support the development of the project.",
-			"donation_notice_unofficial": "Your donations here go to the operator of this FileTools instance. If you wish to support the official FileTools developers, please visit [official_link]vert.sh[/official_link] instead."
+			"donation_notice_official": "Your donations here go to the official FileTools instance (filetools.app), and helps to support the development of the project.",
+			"donation_notice_unofficial": "Your donations here go to the operator of this FileTools instance. If you wish to support the official FileTools developers, please visit [official_link]filetools.app[/official_link] instead."
 		},
 		"credits": {
 			"title": "Credits",
 			"contact_team": "If you would like to contact the development team, please use the email found on the \"Resources\" card.",
 			"notable_contributors": "Notable contributors",
-			"notable_description": "We'd like to thank these people for their major contributions to VERT.",
+			"notable_description": "We'd like to thank these people for their major contributions to FileTools.",
 			"github_contributors": "GitHub contributors",
 			"github_description": "Big thanks to all these people for helping out! [github_link]Want to help too?[/github_link]",
 			"no_contributors": "Seems like no one has contributed yet... [contribute_link]be the first to contribute![/contribute_link]",
 			"libraries": "Libraries",
-			"libraries_description": "A big thanks to FFmpeg (audio, video), ImageMagick (images) and Pandoc (documents) for maintaining such excellent libraries for so many years. VERT relies on them to provide you with your conversions.",
+			"libraries_description": "A big thanks to FFmpeg (audio, video), ImageMagick (images) and Pandoc (documents) for maintaining such excellent libraries for so many years. FileTools relies on them to provide you with your conversions.",
 			"roles": {
 				"lead_developer": "Lead developer; conversion backend, UI implementation",
 				"developer": "Developer; UI implementation",
@@ -285,11 +285,11 @@
 		"title": "Privacy Policy",
 		"summary": {
 			"title": "Summary",
-			"description": "FileTools's privacy policy is very simple: we do not collect or store any data on you at all. We don't use cookies or trackers, analytics are completely private, and all conversions (except videos) happen locally on your browser. Videos are deleted after being downloaded, or an hour, unless explicitly given permission by you to be stored; it will only be used for the purpose of troubleshooting. FileTools self-hosts a Coolify instance for hosting the website and vertd (for video conversion), and a Plausible instance for completely anonymous and aggregated analytics. We use Stripe to process donations, which may collect some data used for fraud prevention.<br/><br/>Note this may only apply to the official FileTools instance at [vert_link]vert.sh[/vert_link]; third-party instances may handle your data differently."
+			"description": "FileTools's privacy policy is very simple: we do not collect or store any data on you at all. We don't use cookies or trackers, analytics are completely private, and all conversions (except videos) happen locally on your browser. Videos are deleted after being downloaded, or an hour, unless explicitly given permission by you to be stored; it will only be used for the purpose of troubleshooting. FileTools self-hosts a Coolify instance for hosting the website and filetoolsd (for video conversion), and a Plausible instance for completely anonymous and aggregated analytics. We use Stripe to process donations, which may collect some data used for fraud prevention.<br/><br/>Note this may only apply to the official FileTools instance at [vert_link]filetools.app[/vert_link]; third-party instances may handle your data differently."
 		},
 		"conversions": {
 			"title": "Conversions",
-			"description": "Most conversions (images, documents, audio) happen entirely locally on your device using WebAssembly versions of the relevant tools (e.g. ImageMagick, Pandoc, FFmpeg). This means your files never leave your device and we will never have access to them.<br/><br/>Video conversions are performed on our servers because they require more processing power and cannot be done very quickly on the browser yet. Videos you convert with VERT are deleted after being downloaded, or after one hour, unless you explicitly give permission for us to store them longer purely for troubleshooting purposes."
+			"description": "Most conversions (images, documents, audio) happen entirely locally on your device using WebAssembly versions of the relevant tools (e.g. ImageMagick, Pandoc, FFmpeg). This means your files never leave your device and we will never have access to them.<br/><br/>Video conversions are performed on our servers because they require more processing power and cannot be done very quickly on the browser yet. Videos you convert with FileTools are deleted after being downloaded, or after one hour, unless you explicitly give permission for us to store them longer purely for troubleshooting purposes."
 		},
 		"donations": {
 			"title": "Donations",
@@ -315,7 +315,7 @@
 		},
 		"contact": {
 			"title": "Contact",
-			"description": "For questions, email us at: [email_link]hello@vert.sh[/email_link]. If you are using a third-party instance of VERT, please contact the hoster of that instance instead."
+			"description": "For questions, email us at: [email_link]hello@filetools.app[/email_link]. If you are using a third-party instance of FileTools, please contact the hoster of that instance instead."
 		},
 		"last_updated": "Last updated: 2025-10-29"
 	}

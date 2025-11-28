@@ -45,27 +45,18 @@ export class FFmpegConverter extends Converter {
 		new FormatInfo("wav", true, true),
 		new FormatInfo("flac", true, true),
 		new FormatInfo("ogg", true, true),
-		new FormatInfo("mogg", true, false),
 		new FormatInfo("oga", true, true),
 		new FormatInfo("opus", true, true),
 		new FormatInfo("aac", true, true),
 		new FormatInfo("alac", true, true), // outputted as m4a
 		new FormatInfo("m4a", true, true), // can be alac
-		new FormatInfo("caf", true, false), // can be alac
 		new FormatInfo("wma", true, true),
 		new FormatInfo("amr", true, true),
 		new FormatInfo("ac3", true, true),
 		new FormatInfo("aiff", true, true),
 		new FormatInfo("aifc", true, true),
 		new FormatInfo("aif", true, true),
-		new FormatInfo("mp1", true, false),
 		new FormatInfo("mp2", true, true),
-		new FormatInfo("mpc", true, false), // unknown if it works, can't find sample file but ffmpeg should support i think?
-		//new FormatInfo("raw", true, false), // usually pcm
-		new FormatInfo("dsd", true, false), // dsd
-		new FormatInfo("dsf", true, false), // dsd
-		new FormatInfo("dff", true, false), // dsd
-		new FormatInfo("mqa", true, false),
 		new FormatInfo("au", true, true),
 		new FormatInfo("m4b", true, true),
 		new FormatInfo("voc", true, true),

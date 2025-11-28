@@ -5,7 +5,7 @@ import { FileToolsDInstance } from "./filetoolsdSettings.svelte";
 
 export { default as Appearance } from "./Appearance.svelte";
 export { default as Conversion } from "./Conversion.svelte";
-export { default as FileToolsD } from "./Vertd.svelte";
+export { default as FileToolsD } from "./FileToolsD.svelte";
 export { default as Privacy } from "./Privacy.svelte";
 
 // TODO: clean up settings & button code (componetize)

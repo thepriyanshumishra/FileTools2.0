@@ -2,7 +2,7 @@
 	import Uploader from "$lib/components/functional/Uploader.svelte";
 	import Tooltip from "$lib/components/visual/Tooltip.svelte";
 	import { converters } from "$lib/converters";
-	import { vertdLoaded } from "$lib/store/index.svelte";
+	import { filetoolsdLoaded } from "$lib/store/index.svelte";
 	import clsx from "clsx";
 	import { AudioLines, BookText, Check, Film, Image } from "lucide-svelte";
 	import { m } from "$lib/paraglide/messages";
@@ -70,7 +70,7 @@
 				formats: getSupportedFormats("filetoolsd"),
 				icon: Film,
 				title: m["upload.cards.video"](),
-				status: $vertdLoaded === true ? "ready" : "not-ready", // not using converter.status for this
+				status: $filetoolsdLoaded === true ? "ready" : "not-ready", // not using converter.status for this
 			};
 		}
 
@@ -231,9 +231,11 @@
 										</p>
 									{/if}
 									<p>
-										{@html sanitize(m["upload.cards.status.text"]({
-											status: getStatusText(s.status),
-										}))}
+										{@html sanitize(
+											m["upload.cards.status.text"]({
+												status: getStatusText(s.status),
+											}),
+										)}
 									</p>
 									<div
 										class="flex flex-col items-center relative"
@@ -243,17 +245,17 @@
 												"upload.cards.supported_formats"
 											]()}&nbsp;</b
 										>
-										<p
-											class="flex flex-wrap justify-center leading-tight px-2"
+										<div
+											class="flex flex-wrap justify-center gap-1.5 px-2 mt-2"
 										>
-											{#each s.formats.split(", ") as format, index}
+											{#each s.formats.split(", ") as format}
 												{@const isPartial =
 													format.endsWith("*")}
 												{@const formatName = isPartial
 													? format.slice(0, -1)
 													: format}
 												<span
-													class="text-sm font-normal flex items-center relative"
+													class="text-xs font-medium px-2 py-1 rounded-md bg-panel-highlight text-on-panel border border-separator/50 flex items-center relative"
 												>
 													{#if isPartial}
 														<Tooltip
@@ -262,19 +264,16 @@
 															)}
 														>
 															{formatName}<span
-																class="text-red-500"
+																class="text-red-500 ml-0.5"
 																>*</span
 															>
 														</Tooltip>
 													{:else}
 														{formatName}
 													{/if}
-													{#if index < s.formats.split(", ").length - 1}
-														<span>,&nbsp;</span>
-													{/if}
 												</span>
 											{/each}
-										</p>
+										</div>
 									</div>
 								</div>
 							</OverlayScrollbarsComponent>

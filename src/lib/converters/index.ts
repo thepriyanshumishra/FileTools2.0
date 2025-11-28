@@ -2,7 +2,7 @@ import type { Categories } from "$lib/types";
 import type { Converter } from "./converter.svelte";
 import { FFmpegConverter } from "./ffmpeg.svelte";
 import { PandocConverter } from "./pandoc.svelte";
-import { VertdConverter } from "./vertd.svelte";
+import { FileToolsDConverter } from "./filetoolsd.svelte";
 import { MagickConverter } from "./magick.svelte";
 import { DISABLE_ALL_EXTERNAL_REQUESTS } from "$lib/util/consts";
 
@@ -13,7 +13,7 @@ const getConverters = (): Converter[] => {
 	];
 
 	if (!DISABLE_ALL_EXTERNAL_REQUESTS) {
-		converters.push(new VertdConverter());
+		converters.push(new FileToolsDConverter());
 	}
 
 	converters.push(new PandocConverter());

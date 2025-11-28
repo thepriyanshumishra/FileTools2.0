@@ -11,7 +11,7 @@
 		files,
 		gradientColor,
 		showGradient,
-		vertdLoaded,
+		filetoolsdLoaded,
 		dropdownStates,
 	} from "$lib/store/index.svelte";
 	import { VertFile } from "$lib/types";
@@ -211,7 +211,7 @@
 						{m["convert.errors.cant_convert"]()}
 					</p>
 					<p class="font-normal">
-						{m["convert.errors.vertd_server"]()}
+						{m["convert.errors.filetoolsd_server"]()}
 					</p>
 				</div>
 			{:else}
@@ -312,7 +312,7 @@
 						})}
 					</p>
 				</div>
-			{:else if isVideo && !$vertdLoaded && !isAudio && !isImage && !isDocument}
+			{:else if isVideo && !$filetoolsdLoaded && !isAudio && !isImage && !isDocument}
 				<div
 					class="h-full flex flex-col text-center justify-center text-failure"
 				>
@@ -320,7 +320,7 @@
 						{m["convert.errors.cant_convert"]()}
 					</p>
 					<p class="font-normal">
-						{m["convert.errors.vertd_not_found"]()}
+						{m["convert.errors.filetoolsd_not_found"]()}
 					</p>
 				</div>
 			{:else}

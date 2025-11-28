@@ -9,7 +9,10 @@
 	import avatarRealmy from "$lib/assets/avatars/realmy.jpg";
 	import avatarAzurejelly from "$lib/assets/avatars/azurejelly.jpg";
 	import { PUB_DONATION_URL, PUB_STRIPE_KEY } from "$env/static/public";
-	import { DISABLE_ALL_EXTERNAL_REQUESTS, GITHUB_API_URL } from "$lib/util/consts";
+	import {
+		DISABLE_ALL_EXTERNAL_REQUESTS,
+		GITHUB_API_URL,
+	} from "$lib/util/consts";
 	import { m } from "$lib/paraglide/messages";
 	import { ToastManager } from "$lib/util/toast.svelte";
 	// import { dev } from "$app/environment";
@@ -137,9 +140,8 @@
 		}
 	});
 
-	const donationsEnabled = PUB_STRIPE_KEY
-		&& PUB_DONATION_URL
-		&& !DISABLE_ALL_EXTERNAL_REQUESTS;
+	const donationsEnabled =
+		PUB_STRIPE_KEY && PUB_DONATION_URL && !DISABLE_ALL_EXTERNAL_REQUESTS;
 </script>
 
 <div class="flex flex-col h-full items-center">
@@ -151,7 +153,7 @@
 	<div
 		class="w-full max-w-[1280px] flex flex-col md:flex-row gap-4 p-4 md:px-4 md:py-0"
 	>
-		<!-- Why VERT? & Credits -->
+		<!-- Why FileTools? & Credits -->
 		<div class="flex flex-col gap-4 flex-1">
 			{#if donationsEnabled}
 				<About.Donate />

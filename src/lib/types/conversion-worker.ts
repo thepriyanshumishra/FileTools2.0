@@ -11,6 +11,7 @@ interface ConvertMessage {
 	to: string;
 	compression: number | null;
 	keepMetadata?: boolean;
+	options?: Record<string, any>;
 }
 
 interface FinishedMessage {

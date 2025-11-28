@@ -3,7 +3,10 @@
 	import { goto, beforeNavigate, afterNavigate } from "$app/navigation";
 
 	import { PUB_PLAUSIBLE_URL, PUB_HOSTNAME } from "$env/static/public";
-	import { DISABLE_ALL_EXTERNAL_REQUESTS, FILETOOLS_NAME } from "$lib/util/consts.js";
+	import {
+		DISABLE_ALL_EXTERNAL_REQUESTS,
+		FILETOOLS_NAME,
+	} from "$lib/util/consts.js";
 	import * as Layout from "$lib/components/layout";
 	import * as Navbar from "$lib/components/layout/Navbar";
 	import featuredImage from "$lib/assets/FileTools_Feature.webp";
@@ -111,6 +114,17 @@
 </script>
 
 <svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin="anonymous"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+		rel="stylesheet"
+	/>
+
 	<title>{FILETOOLS_NAME}</title>
 	<meta name="theme-color" content="#F2ABEE" />
 	<meta

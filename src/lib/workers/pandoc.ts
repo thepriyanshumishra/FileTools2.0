@@ -58,6 +58,7 @@ const handleMessage = async (message: WorkerMessage): Promise<any> => {
 				}
 				const buf = new Uint8Array(await file.arrayBuffer());
 				const args = `-f ${formatToReader(`.${file.name.split(".").pop() || ""}` as Format)} -t ${formatToReader(to)} --extract-media=.`;
+
 				const [result, stderr, zip] = await pandoc(
 					args,
 					buf,
